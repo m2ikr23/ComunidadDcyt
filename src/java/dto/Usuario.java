@@ -10,22 +10,34 @@ package dto;
  * @author m2iker
  */
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+import javax.persistence.CascadeType;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 @Entity
-public class Usuario implements Serializable{
-      @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected int id;   
-    protected String nombre= " ";   
-    protected String cedula= " ";   
-    protected String telefono= " ";    
-    protected String correo = " ";
-    protected String password= " ";
-    protected String estatus= " ";
+@DiscriminatorValue(value="user")
+public class Usuario extends Persona implements Serializable{
+    
+    
+@ManyToMany(cascade = {javax.persistence.CascadeType.MERGE,
+        javax.persistence.CascadeType.REFRESH}, fetch = FetchType.LAZY)
+@JoinTable(name="usuarioAmigo",joinColumns={@JoinColumn(name="idUsuario")},
+        inverseJoinColumns={@JoinColumn(name="idAmigo")})
+private Set<Amigo> amigo = new HashSet();
+
+    public Set<Amigo> getAmigo() {
+        return amigo;
+    }
+
+    public void setAmigo(Set<Amigo> amigo) {
+        this.amigo = amigo;
+    }
    public Usuario(){
    }
 
@@ -38,67 +50,5 @@ public class Usuario implements Serializable{
         this.estatus="A";
     }
     
-
-    
- 
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEstatus() {
-        return estatus;
-    }
-
-    public void setEstatus(String estatus) {
-        this.estatus = estatus;
-    }
-
- 
-    
-    
 }
+
