@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+ 
+    <window>
+        <zscript>
+            <[!CDATA[
+            
+
+                ]]>
+        </zscript>
+        <div sclass="container"  style="z-index:1;">
+            <div sclass="row">
+                <div sclass="col-md-7 ">
+
+                    <div sclass="panel panel-default">
+                        <div sclass="panel-heading">  
+                            <label >Perfil de Usuario</label>
+                        </div>
+                        <div sclass="panel-body">
+       
+                            <div sclass="box box-info">
+        
+                                <div sclass="box-body">
+                                    <div sclass="col-sm-6">
+                                        <div  align="center"> 
+                                            <image  src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" sclass="img-circle img-responsive"/> 
+                              
+                                        </div> 
+            
+                                    </div>
+           
+                                    <label style="color:#00b1b1;">Nombre Del Usuario</label>
+                                    <span>
+                                        Estudiante
+                                    </span>            
+                                </div>
+                                <div class="clearfix"></div>
+                                  
+                                <separator bar="true"/>
+        
+                                <div class="col-sm-5 col-xs-6 tital " >Nombre:</div>
+                                <div class="col-sm-7 col-xs-6 ">Juan</div>
+                                <div class="clearfix"></div>
+                                <div class="bot-border"></div>
+
+                                <div class="col-sm-5 col-xs-6 tital " >Carrera:</div>
+                                <div class="col-sm-7"> Informatica</div>
+                                <div class="clearfix"></div>
+                                <div class="bot-border"></div>
+
+                                <div class="col-sm-5 col-xs-6 tital " >Semestre:</div>
+                                <div class="col-sm-7"> Quinto Semestre </div>
+                                <div class="clearfix"></div>
+                                <div class="bot-border"></div>
+
+                                <div class="col-sm-5 col-xs-6 tital " >Cumpleaños:</div>
+                                <div class="col-sm-7">11 Jun </div>
+
+                                <div class="clearfix"></div>
+                                <div class="bot-border"></div>
+
+                                <div class="col-sm-5 col-xs-6 tital " > mas info:</div>
+                                <div class="col-sm-7">mas info</div>
+
+                                <div class="clearfix"></div>
+                                <div class="bot-border"></div>
+
+                                <div class="col-sm-5 col-xs-6 tital " >mas info:</div>
+                                <div class="col-sm-7">info</div>
+
+                            </div>
+
+                        </div>
+       
+                    </div> 
+                </div>
+            </div>          
+        </div>
+        <div id="historia" style="position:absolute;top:80%;" >
+         
+        </div>
+    </window>
+ 
+</zk>

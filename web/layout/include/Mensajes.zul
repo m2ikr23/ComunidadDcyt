@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+ 
+        <style>
+        .z-button{
+        background-image:none;
+        }
+        .form-control{
+            width:400px;
+            }
+    </style>
+     
+   
+        <grid hflex="1"  sclass="form-group" >
+           
+            <columns visible="true" >
+                <column hflex="1"/>
+              
+            </columns>
+               
+            <auxhead >
+                <auxheader  colspan="2" label="Mensajes" sclass="header" />
+                      
+            </auxhead>
+            <rows >
+                <row hflex="1"  >
+       
+                    <html>
+      
+                    Para: <input id="usuario" class="form-control input-sm" type="text" value="maiker" constraint="no empty:Debe introducir un destinatario"/>     
+                    </html>
+                </row>
+      
+                <row hflex="1"  >
+                    <html>
+                    Mensaje: <textarea id="mensaje" class="form-control" placeholder="Escriba su Mensaje" constraint="no empty:El mensaje está vacío" />
+                    <div>
+                        <button class="btnChat" id="btnEnviar">enviar</button>
+                    </div>
+                    </html>
+                </row>
+                <row spans="2" align="center">
+                   
+                </row>
+            </rows>
+        </grid>   
+         
+</zk>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul" >
+
+   <style src="/resources/css/chat.css" />
+    
+   <html>
+ 
+       <table>
+            <tr>
+                <td colspan="2">
+                    <input type="text" id="username" placeholder="Username"/>
+                    <button type="button" onclick="connect();" >Connect</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea readonly="true" rows="10" cols="80" id="log"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" size="51" id="msg" placeholder="Message"/>
+                    <button type="button" onclick="send();" >Send</button>
+                </td>
+            </tr>
+        </table>
+
+     </html>
+        <script src="/resources/js/chat.js" defer="true" type="text/javascript">
+           </script>
+</zk>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <image src="/img/ucla_logo.jpg" width="60px" />
+    <div width="500px" apply="com.ucla.redsocial.presentacion.controllers.RegistroComposer" >
+      
+        <grid hflex="1" width="50%" >
+            <columns visible="false" hflex="1"  >
+                <column width="20%"/>
+                <column width="25%" />
+                   
+            </columns>
+               
+            <auxhead >
+                <auxheader  colspan="2" label="Formulario de registro" sclass="header" />
+                      
+            </auxhead>
+            <rows >
+                <row hflex="1"  >
+                    Cédula<textbox id="dniBox" hflex="1" placeholder="Cédula" constraint="no empty:Debe introducir una C.I valida"/>     
+                </row>
+                <row hflex="1"  >
+                    Nombre <textbox id="nameBox" hflex="1" placeholder="Nombre" constraint="no empty:Debe expecificar su nombre" />     
+                </row>
+                <row  >
+                    Apellido <textbox id="lastnameBox" hflex="1" placeholder="Apellido" constraint="no empty:Debe expecificar su apellido" />
+                </row>  
+                <row  >
+                    Telefono <textbox id="telBox" type="tel" hflex="1" placeholder="+582515555555"/>
+                </row>
+                <row >
+                    Correo <textbox id="emailBox" type="email" hflex="1" placeholder="micorreo@email.com" constraint="no empty:Por favor introduzca un email valido"/>
+                </row>  
+                <row>
+                    Contraseña<textbox id="passBox" type="password" hflex="1" constraint="no empty:Por favor introduzca una contraseña"/>
+                </row>
+                <row>
+                    Carrera<textbox id="carrBox" type="text" hflex="1" constraint="no empty:Por favor introduzca una contraseña"/>
+                </row>
+                
+                <row hflex="1">
+                    Genero: 
+                    <radiogroup id="genderRadio" sclass="radio-group" hflex="1">
+                        <radio label="Hombre" value="hombre" checked="true"/>
+                        <radio label="Mujer"  value="mujer" />
+                            
+                    </radiogroup> 
+                </row>
+                <row>
+                    Cumpleaños <datebox id="birthdayBox" hflex="1" constraint="no empty, no today, no future" />                   
+                </row>
+                <row spans="2" align="center" >
+                    <hlayout>
+                        <checkbox id="acceptTermBox" /> Acepta los terminos de uso
+                    </hlayout>
+                </row>
+                <row spans="2" align="center">
+                    <hlayout >
+                        <button id="resetButton" label="Cancelar" sclass="btn-primary" />
+                        <button id="submitButton" label="Enviar" disabled="true" sclass="btn-info" />
+                        <button id="deleteButton" label="Eliminar" disabled="false" sclass="btn-success" />
+                        
+                    </hlayout>
+                </row>
+            </rows>
+        </grid>   
+            
+    </div>
+</zk>

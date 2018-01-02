@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul" apply="Main">
+    <zscript>
+		<![CDATA[
+			void irInclude(String opcion,Component targetArea) {
+				targetArea.getChildren().clear();
+				Map parametros = new HashMap();
+				if (self instanceof Toolbarbutton)
+				{
+					//parametros.put("permisos", servicioAdministrarConfiguracion.buscarPermisosPorVentanaRol(self.label, usuario.rolSistema));
+				}
+				
+				Component component = Executions.createComponents(opcion,targetArea,parametros);
+				component.setParent(targetArea);		
+			}
+                        	]]>
+    </zscript>
+    <style dynamic="true">
+        .z-toolbar{
+        background-image:none;
+        background-color:#2aabd2;
+        }
+        .navbar {
+           
+        }
+            
+         
+    </style>
+    <borderlayout >
+        <north border="none" flex="true">
+      
+            <toolbar height="40px">
+                <a href="Index_inicio.zul" > 
+                    <image src="/img/logo1.png" width="70px" height="30px" style="position:absolute;left:5%"   />
+                </a>
+                <bandbox height="40%" placeholder="Buscar" style="position:absolute;left:15%" /> 
+                
+                <toolbarbutton id="btn-home"  iconSclass="z-icon-home fa-2x" onClick='alert("Inicio")' style="position:absolute;left:55%">
+                    <attribute name="onClick">
+			<![CDATA[
+				{
+				irInclude("/layout/include/Publicaciones.zul",targetArea);
+                              
+				}
+				]]>
+                    </attribute>
+                </toolbarbutton>
+         
+                <toolbarbutton id="btn-user" iconSclass="z-icon-user fa-2x" style="position:absolute;left:60%">
+                    <attribute name="onClick">
+			<![CDATA[
+				{
+				irInclude("/layout/include/Perfil.zul",targetArea);
+				}
+				]]>
+                    </attribute>
+                </toolbarbutton>
+                <toolbarbutton id="btn-msg" iconSclass="z-icon-comments fa-2x" style="position:absolute;left:65%">
+                    <attribute name="onClick">
+			<![CDATA[
+				{
+				irInclude("/layout/include/Mensajes.zul",targetArea);
+                                irInclude("/layout/include/Chat.zul",targetAreaDer);
+				}
+				]]>
+                    </attribute>
+                </toolbarbutton>
+                <toolbarbutton id="notif" iconSclass="z-icon-bell fa-2x" style="position:absolute;left:70%" onClick='alert("Notificaciones")' />
+                <toolbarbutton  id="btn-menu"  iconSclass="z-icon-reorder fa-2x" style="position:absolute;left:80%"/>
+                <div id="menuoption" sclass="list-group" style="display:none">
+                    <a iconSclass="z-icon-info fa" >
+                        <label sclass="text-muted" > Feedback</label>
+                    </a>
+                    <separator bar="false"/>
+                    <a iconSclass="z-icon-cog fa">
+                        <label sclass="text-muted" > Configuraciones</label>
+                    </a>
+                    <separator bar="false"/>
+                    <a iconSclass="z-icon-sign-out fa">
+                        <label sclass="text-muted" > Salir</label>
+                    </a>
+                </div>   
+            </toolbar>
+            
+   
+        </north>
+        <west width="12%" border="none" flex="true" >
+            <include src="/layout/include/Sidebar.zul" if="${usuario!=null}" ></include>
+        </west>
+        <center  border="none" flex="true" vflex="1" style="overflow:auto" >
+            <div id="targetArea">
+                                
+            </div>
+            
+        </center >
+        <east width="30%" border="none" flex="true" vflex="1" style="overflow:auto">
+            <div id="targetAreaDer" width="20%">
+                              
+            </div>
+        </east>
+                        
+    </borderlayout>
+      <div align="center" if="${usuario == null}">
+		<vbox align="center">
+			
+		</vbox>
+	</div>   
+</zk>

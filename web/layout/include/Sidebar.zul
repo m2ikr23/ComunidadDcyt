@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <div sclass="navbar navbar">
+        <html sclass="navbar-header">
+            <lu  title="" class="nav navbar-nav ">
+                <li>
+                    <ul class="navbar nav">
+                        <li>
+                            <a href="#">
+                                <image src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" width="20px" height="40px" alt="foto"/>
+                                Usuario
+                            </a>   
+                        </li>
+                                                    
+                    </ul>
+                                            
+                </li>
+                <li>
+                    <div class="sidebar-nav">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">Explorar</li>        
+                            <li class="active">
+                                <a href="index.zul">
+                                    <i class="glyphicon glyphicon-home"></i> Inicio</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-edit"></i> Publicar</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-calendar"></i> Calendario</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-user"></i> Amigos</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-menu-right"></i> Grupos</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-comment"></i> Mesajes</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-picture"></i> Archivos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </lu>
+        </html>
+    </div>
+</zk>

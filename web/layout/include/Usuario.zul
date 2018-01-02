@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <image src="/img/ucla_logo.jpg" width="60px" />
+    <div width="500px">
+
+        <grid hflex="1" width="50%" >
+            <columns visible="false" hflex="1"  >
+                <column width="20%"/>
+                <column width="25%" /> 
+                
+                  </columns>
+               
+            <auxhead >
+                <auxheader  colspan="2" label="Formulario de Usuario" sclass="header" />
+                </auxhead>
+            <rows >
+               
+                
+               <row hflex="1"  >
+                    Nombre <textbox id="nameBox" hflex="1"  constraint="no empty:Debe expecificar su nombre" />     
+                </row>
+                 <row  >
+                    Cédula <textbox id="ceduBox" hflex="1"  constraint="no empty:Debe expecificar su cédula"/>
+                </row>  
+                
+                 <row  >
+                    Carrera <textbox id="carrBox" hflex="1"  constraint="no empty:Debe especificar una carrera" />
+                </row>  
+                
+                 <row  >
+                    Semestre <textbox id="semBox" hflex="1"  constraint="no empty:Debe especificar el semestre que cursa" />
+                </row>  
+                
+                 <row  >
+                    Materia <textbox id="matBox" hflex="1" constraint="no empty:Debe especificar una materia que cursa" />
+                </row>  
+               
+                 <row  >
+                    Sección <textbox id="archBox" hflex="1" constraint="no empty:Debe ingresar una sección" />
+                </row>  
+                
+                <row  >
+                    Correo Electronico <textbox id="correoBox" hflex="1"  constraint="no empty:Debe ingresar un correo valido" />
+                </row>  
+                
+                <row  >
+                   Tipo de Usuario <combobox>
+		     		<comboitem label="Estudiante"/>
+                                <comboitem label="Profesor"/>
+	                </combobox>
+                </row>  
+                
+                
+                
+                <row spans="2" align="center">
+                    <hlayout >
+                        <button id="resetButton" label="Cancelar" sclass="btn-primary" />
+                        <button id="submitButton" label="Enviar" onClick='alert("Usuario Registrado")' />
+                        <button id="deleteButton" label="Eliminar" onClick='alert("Usuario Eliminado")' disabled="false" sclass="btn-success" />
+                        
+                    </hlayout>
+                </row>
+                
+                </rows>
+                
+                </grid>   
+            
+    </div>
+                
+                
+</zk>

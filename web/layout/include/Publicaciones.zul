@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window>
+      
+            <div sclass="container">
+                <div sclass="row">
+              
+                    <div sclass="col-md-7 ">
+      <separator bar="false"/>
+                        <div sclass="panel panel-default">
+                            <div sclass="panel-heading">  
+                                <label >Noticia 1</label>
+                            </div>
+                            <div sclass="panel-body">
+       
+                                <div sclass="box box-info">
+                                    <label>-----------------
+                                    ------------------------
+                                    ------------------------
+                                    ------------------------
+                                    ----------------------------
+                                    ------------------------
+                                    ---------------------
+                                    ---------------------
+                                    </label>
+                                   
+
+                                </div>
+         
+
+                            </div>
+       
+            
+                        </div> 
+                    </div>
+                  
+                      <div sclass="col-md-7 ">
+  <separator bar="false"/>
+                        <div sclass="panel panel-default">
+                            <div sclass="panel-heading">  
+                                <label >Noticia 2</label>
+                            </div>
+                            <div sclass="panel-body">
+       
+                                <div sclass="box box-info">
+        
+                                     <label>-----------------
+                                    ------------------------
+                                    ------------------------
+                                    ------------------------
+                                    ----------------------------
+                                    ------------------------
+                                    ---------------------
+                                    ---------------------
+                                    </label>
+
+                                </div>
+         
+
+                            </div>
+       
+            
+                        </div> 
+                    </div>
+                
+                      <div sclass="col-md-7 ">
+    <separator bar="false"/>
+                        <div sclass="panel panel-default">
+                            <div sclass="panel-heading">  
+                                <label >Noticia 3</label>
+                            </div>
+                            <div sclass="panel-body">
+       
+                                <div sclass="box box-info">
+        
+                                     <label>-----------------
+                                    ------------------------
+                                    ------------------------
+                                    ------------------------
+                                    ----------------------------
+                                    ------------------------
+                                    ---------------------
+                                    ---------------------
+                                    </label>
+
+                                </div>
+         
+
+                            </div>
+       
+            
+                        </div> 
+                    </div>
+                    
+                      <div sclass="col-md-7 ">
+<separator bar="false"/>
+                        <div sclass="panel panel-default">
+                            <div sclass="panel-heading">  
+                                <label >Noticia 4</label>
+                            </div>
+                            <div sclass="panel-body">
+       
+                                <div sclass="box box-info">
+        
+                                     <label>-----------------
+                                    ------------------------
+                                    ------------------------
+                                    ------------------------
+                                    ----------------------------
+                                    ------------------------
+                                    ---------------------
+                                    ---------------------
+                                    </label>
+
+                                </div>
+         
+
+                            </div>
+       
+            
+                        </div> 
+                    </div>
+                    <separator bar="false"/>
+                      <div sclass="col-md-7 ">
+
+                        <div sclass="panel panel-default">
+                            <div sclass="panel-heading">  
+                                <label >Noticia 5</label>
+                            </div>
+                            <div sclass="panel-body">
+       
+                                <div sclass="box box-info">
+        
+                                     <label>-----------------
+                                    ------------------------
+                                    ------------------------
+                                    ------------------------
+                                    ----------------------------
+                                    ------------------------
+                                    ---------------------
+                                    ---------------------
+                                    </label>
+
+                                </div>
+         
+
+                            </div>
+       
+            
+                        </div> 
+                    </div>
+                    <separator bar="false"/>
+                      <div sclass="col-md-7 ">
+
+                        <div sclass="panel panel-default">
+                            <div sclass="panel-heading">  
+                                <label >Noticia 6</label>
+                            </div>
+                            <div sclass="panel-body">
+       
+                                <div sclass="box box-info">
+        
+                                     <label>-----------------
+                                    ------------------------
+                                    ------------------------
+                                    ------------------------
+                                    ----------------------------
+                                    ------------------------
+                                    ---------------------
+                                    ---------------------
+                                    </label>
+
+                                </div>
+         
+
+                            </div>
+       
+            
+                        </div> 
+                    </div>
+                </div>          
+            </div>
+  
+    </window>
+</zk>
