@@ -38,14 +38,14 @@ public class ChatEndpoint {
         users.put(session.getId(), username);
 
         Mensaje message = new Mensaje();
-        message.setFromUser(username);
+        message.setFrom(username);
         message.setContent("Connected!");
         broadcast(message);
     }
 
     @OnMessage
     public void onMessage(Session session, Mensaje message) throws IOException, EncodeException {
-        message.setFromUser(users.get(session.getId()));
+        message.setFrom(users.get(session.getId()));
         broadcast(message);
     }
 
@@ -53,7 +53,7 @@ public class ChatEndpoint {
     public void onClose(Session session) throws IOException, EncodeException {
         chatEndpoints.remove(this);
         Mensaje message = new Mensaje();
-        message.setFromUser(users.get(session.getId()));
+        message.setFrom(users.get(session.getId()));
         message.setContent("Disconnected!");
         broadcast(message);
     }

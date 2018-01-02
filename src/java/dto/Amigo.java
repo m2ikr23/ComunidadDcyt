@@ -19,14 +19,8 @@ public class Amigo implements Serializable{
     private int id;
     private String nombre;
     private String correo;
-        
-@ManyToMany(cascade = {javax.persistence.CascadeType.MERGE,
-        javax.persistence.CascadeType.REFRESH}, fetch = FetchType.LAZY)
-@JoinTable(name="usuarioAmigo",joinColumns={@JoinColumn(name="idUsuario")},
-        inverseJoinColumns={@JoinColumn(name="idAmigo")})
-private Set<Usuario>usuario = new HashSet();
-
     
+
     public Amigo() {
     }
     
@@ -59,13 +53,5 @@ private Set<Usuario>usuario = new HashSet();
     public void setId(int id) {
         this.id = id;
     }
-public Set<Usuario> getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Set<Usuario> usuario) {
-        this.usuario = usuario;
-    }
-    
 
 }

@@ -5,49 +5,35 @@
  */
 package dto;
 
-import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-
 /**
  *
  * @author maike
  */
-@Entity
-public class Mensaje implements Serializable {
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int id;
-    private String fromUser;
-    private String toUser;
+
+public class Mensaje {
+    private String from;
+    private String to;
     private String content;
-  
-    
+
     @Override
     public String toString() {
         return super.toString();
     }
 
-    public String getFromUser() {
-        return fromUser;
+    public String getFrom() {
+        return from;
     }
 
-    public void setFromUser(String fromUser) {
-        this.fromUser = fromUser;
+    public void setFrom(String from) {
+        this.from = from;
     }
 
-    public String getToUser() {
-        return toUser;
+    public String getTo() {
+        return to;
     }
 
-    public void setToUser(String toUser) {
-        this.toUser = toUser;
+    public void setTo(String to) {
+        this.to = to;
     }
 
     public String getContent() {
@@ -57,16 +43,4 @@ public class Mensaje implements Serializable {
     public void setContent(String content) {
         this.content = content;
     }
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-
-    
 }
