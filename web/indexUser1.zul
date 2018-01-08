@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="" contentType="text/html;charset=UTF-8" id="indeUser"?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>
+
+<zk xmlns:n="http://www.zkoss.org/2005/zk/native">
+    <zscript src="/commons/script_1.zs" />
+   <!-- <zscript>
+		<![CDATA[
+			if (usuario == null)
+			{
+                        Executions.sendRedirect("/index.zul");
+			}
+		]]>
+    </zscript>-->
+       
+  
+                    <div align="center" if="${usuario == null}">
+                        <vbox align="center">
+                            
+                            
+                                                        
+                                                       
+                                                                                
+                            <html style="background-color:transparent">
+        
+                                <div class="form-inline" width="400%" style="background-color:transparent">
+                                    <div class="form-group" style="background-color:transparent">
+                                        <label for="email"> Usuario:</label>
+                                        <input type="email" class="form-control" id="usuario"/>
+                                    </div>
+                                    <div class="form-group" style="background-color:transparent">
+                                        <label for="pwd">Contraseña:</label>
+                                        <input type="password" class="form-control" id="pwd"/>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"/> Recuérdame</label>
+                                    </div>
+                                    
+                                </div>
+                                                                                
+                            </html>
+                            
+                                    <button zclass="z-button" label="Entrar">
+                                        <attribute name= "onClick">
+                                            
+											<![CDATA[
+												try {
+												dto.Usuario usuario = new dto.Usuario();
+													obeCtx.setUsuarioActual(usuario);
+													//Executions.getCurrent().sendRedirect("/indexUser1.zul","_blank"); 
+													Executions.sendRedirect("/index.zul");
+											} catch (Exception obeex) {
+												Messagebox.show("Usuario y Password no Coinciden", "Error", Messagebox.OK, Messagebox.ERROR);
+											}
+											]]>    
+                                        </attribute>
+                                                                            
+                                    </button>
+                        </vbox>
+                    </div>
+
+            
+                	
+                            
+                                                        				
+                       
+</zk>
+               
+                                                                                          

@@ -2,6 +2,7 @@
 
 <zk xmlns="http://www.zkoss.org/2005/zul">
     <div sclass="navbar navbar">
+         <label id="username" value="@{user.nombre}"></label>
         <html sclass="navbar-header">
             <lu  title="" class="nav navbar-nav ">
                 <li>
@@ -9,7 +10,7 @@
                         <li>
                             <a href="#">
                                 <image src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" width="20px" height="40px" alt="foto"/>
-                                Usuario
+                                   
                             </a>   
                         </li>
                                                     
@@ -22,11 +23,11 @@
                             <li class="nav-header">Explorar</li>        
                             <li class="active">
                                 <a href="index.zul">
-                                    <i class="glyphicon glyphicon-home"></i> Inicio</a>
+                                    <i class="fa fa-home"></i> Inicio</a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="glyphicon glyphicon-edit"></i> Publicar</a>
+                                    <i class="fa fa-edit"></i> Publicar</a>
                             </li>
                             <li>
                                 <a href="#">
